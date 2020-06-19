@@ -2,10 +2,10 @@ package main
 
 import "fmt"
 
-func main()  {
+func main() {
 
 	var s = Student{
-		Person: Person{"jj",2},
+		Person: Person{"jj", 2},
 		school: "beijing",
 	}
 	//子类调用父类方法
@@ -19,9 +19,8 @@ func main()  {
 //父类
 type Person struct {
 	name string
-	age int
+	age  int
 }
-
 
 //子类
 type Student struct {
@@ -29,14 +28,14 @@ type Student struct {
 	school string
 }
 
-func (p *Person)eat()  {
+func (p *Person) eat() {
 	fmt.Println("父类的方法")
 }
 
-func (s *Student)say()  {
+func (s *Student) say() {
 	fmt.Println("子类调用自己的方法")
 }
 
-func (s *Student)eat()  {
+func (s *Student) eat() {
 	fmt.Println("重写父类方法")
 }
