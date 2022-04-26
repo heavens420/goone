@@ -23,7 +23,7 @@ func main() {
 
 	//设置时间种子
 	rand.Seed(time.Now().UnixNano())
-	for i := 0; i < 100; i++ {
+	for i := 0; i < 10; i++ {
 		//生成随机数
 		rand := rand.Int63()
 		fmt.Println(rand)

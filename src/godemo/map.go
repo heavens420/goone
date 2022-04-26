@@ -19,6 +19,10 @@ func main() {
 	map2["waiyu"] = 11
 	fmt.Println(map2)
 
+	// 删除key
+	delete(map2, "yuwen")
+	fmt.Printf("删除后的map2:%v\n", map2)
+
 	//判断map["pink"]是否存在
 	v, ok := map2["pink"]
 	if ok {
@@ -52,7 +56,7 @@ func main() {
 	}
 	sort.Ints(keys) //给int类型排序
 	fmt.Println(keys)
-
+	fmt.Println("------------------------------------------")
 	var m1 = map[string]string{"age": "11", "name": "zhagnsan"}
 	var m2 = map[string]string{"age": "22", "name": "lisi"}
 	var m3 = map[string]string{"age": "33", "name": "wangwu"}

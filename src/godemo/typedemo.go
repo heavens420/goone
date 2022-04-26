@@ -23,6 +23,7 @@ type myfun func(int, int) string
 
 func fun1() myfun {
 
+	return nil
 }
 
 //定义别名 给int起个别名

@@ -35,7 +35,7 @@ func main() {
 
 	var input int
 	var output int
-	fmt.Print("请输入两个整数\n")
+	fmt.Print("\n请输入两个整数,逗号分隔\n")
 	fmt.Scanf("%d,%d\n", &input, &output)
 	fmt.Println(input, output)
 }

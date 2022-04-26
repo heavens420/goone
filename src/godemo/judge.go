@@ -14,7 +14,7 @@ func main() {
 	fmt.Println("over")
 
 	//go 独有写法 定义局部变量
-	if i := 2; i > 3 {
+	if i := 2; i*i > 3 {
 		fmt.Println(">>>>2222")
 	} else {
 		fmt.Println("<<<<<<<<<<<<2222222")
@@ -88,5 +88,15 @@ func main() {
 		//平年减 两天
 		sum -= 2
 		sum += day
+	}
+	//fmt.Printf("%d的天数为%d", year, sum)
+
+	ifTest()
+}
+
+func ifTest() {
+	a := 1
+	if fmt.Println("hhhh"); a == 1 {
+		fmt.Println(a)
 	}
 }

@@ -10,17 +10,19 @@ import (
 
 func main() {
 	myerror()
+	fmt.Println("---------------")
 	myerror2()
+	fmt.Println("--------------")
 	checkAge(-20)
 
 	openFile("C:\\Workplaces\\go\\w1\\goone\\godemo\\array.go")
 }
 
 func myerror() {
-	f, err := os.Open("C:\\Workplaces\\go\\w1\\goone\\godemo\\array.go")
+	f, err := os.Open("src/godemo/array.go")
 	if err != nil {
-		log.Fatal(err)
 		fmt.Println(err, "ooo")
+		log.Fatal(err)
 	}
 	fmt.Printf(f.Name(), "文件打开成功\n")
 }

@@ -24,7 +24,7 @@ func main() {
 	//无条件 死循环 相当于while(true)
 	for {
 		i++
-		if i == 100000 {
+		if i == 103 {
 			break
 		}
 		fmt.Println(i)
@@ -65,4 +65,26 @@ func main() {
 			fmt.Printf("%d 是水仙花数\n", i)
 		}
 	}
+
+	//go的字符有 rune和uint8两种类型  runne可输出中文日文等字符
+	fmt.Println("---------打印中文------------")
+	str_zw := "ha中文"
+	for _, ch := range str_zw {
+		fmt.Printf("%v(%c),", ch, ch)
+	}
+	fmt.Println()
+	for i := 0; i < len(str_zw); i++ {
+		fmt.Printf("%v(%c),", str_zw[i], str_zw[i])
+	}
+
+	//类型修改 先转成byte或者rune类型  不论转成那种类型 都会重新分配内存
+	fmt.Println()
+	byte1 := []byte(str_zw)
+	byte1[0] = 'm'
+	fmt.Println(string(byte1))
+
+	rune1 := []rune(str_zw)
+	rune1[2] = '日'
+	fmt.Println(string(rune1))
+
 }
